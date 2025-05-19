@@ -1,0 +1,28 @@
+body {
+  font-family: "Jersey 25", sans-serif;
+  padding-top: 80px;
+}
+
+.main-nav a {
+  font-size: 2.5rem;        
+  text-decoration: none;   
+  color: #000;               
+}
+
+.main-nav a:hover {
+  color: #0d6efd;            
+}
+
+.navbar.fixed-top {
+  z-index: 9999;
+}
+
+.floating-nav {
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  z-index: 1055;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}

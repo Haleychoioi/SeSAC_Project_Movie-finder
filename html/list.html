@@ -12,12 +12,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jersey+25&display=swap" rel="stylesheet">
-  <!-- CHART -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
-
+  
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/index.css">
 
   <title>🍿Movie Mate🍿</title>
 </head>
@@ -28,30 +24,25 @@
       <a class="nav-link" href="index.html">Search</a>
       <a class="nav-link" href="#">About me</a>
     </div>
-  </nav>  
+  </nav>
 
   <nav class="nav flex-column position-fixed shadow p-2 rounded-4 floating-nav">
     <a class="nav-link rounded-3 text-dark fw-semibold" href="index.html">🔍 Wanna<br />Search?</a>
   </nav>
-
+  
   <button class="btn btn-outline-dark btn-lg ms-3 mt-5" onclick="history.back()">
     ⬅️ Back
   </button>
 
-  <div class="container py-5">
-    <div class="row align-items-center" style="min-height: 100%;">
-      <div class="col-md-5 col-12 text-center mb-4 mb-md-0 imgContainer"></div>
-      <div class="col-md-7 col-12 infoContainer"></div>
-    </div>
-    
-    <div class="row">
-      <canvas id="voteChart" width="400" height="200"></canvas>
-    </div>
+  <h2 class="text-center mb-4 text-center mt-4"><span class="keyword"></span>Search Results</h2>
+
+  <div class="container mt-5">
+    <div class="row resultList g-4"></div>
   </div>  
 
   <script src="../js/movieData.js"></script>
-  <script src="../js/detail.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
   <script src="../js/index.js"></script>
+  <script src="../js/list.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 </body>
 </html>

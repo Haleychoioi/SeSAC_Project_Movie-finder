@@ -1,0 +1,25 @@
+.main-title-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.main-title {
+  font-family: "Jersey 25", sans-serif;
+  font-size: 6rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  cursor: default;
+}
+
+.main-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(60px) scale(0.5) rotate(-20deg);
+  transition: color 0.2s ease;
+  cursor: default;
+}
