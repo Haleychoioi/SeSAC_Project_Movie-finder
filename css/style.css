@@ -1,28 +1,53 @@
 body {
   font-family: "Jersey 25", sans-serif;
-  padding-top: 80px;
+  background-color: #FEFF9F;
+  color: black;
+}
+
+.main-nav {
+  background-color: #D3EE98 !important;
 }
 
 .main-nav a {
   font-size: 2.5rem;        
-  text-decoration: none;   
-  color: #000;               
+  text-decoration: none;        
 }
 
 .main-nav a:hover {
-  color: #0d6efd;            
-}
-
-.navbar.fixed-top {
-  z-index: 9999;
+  color: #4ac354;
 }
 
 .floating-nav {
-  top: 50%;
-  left: 16px;
+  top: 40%;
+  right: 16px;
   transform: translateY(-50%);
   z-index: 1055;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(184, 255, 70, 0.5); 
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transform-origin: center;
+}
+
+.floating-nav:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 235, 130, 0.7); 
+}
+
+.backBtn {
+  background-color: rgba(184, 255, 70, 0.5); 
+  margin-top: 100px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.backBtn:hover {
+  background-color: rgba(255, 235, 130, 0.7);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  transform: translateY(-2px);
 }

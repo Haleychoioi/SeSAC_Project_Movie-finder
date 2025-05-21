@@ -24,9 +24,9 @@
 <body>
   <nav class="navbar bg-body-tertiary main-nav fixed-top">
     <div class="container-fluid d-flex justify-content-start align-items-center gap-4">
-      <a class="navbar-brand" href="index.html">🍿Movie Mate🍿</a>
+      <a class="navbar-brand" href="index.html">🍿MovieMate🍿</a>
       <a class="nav-link" href="index.html">Search</a>
-      <a class="nav-link" href="#">About me</a>
+      <a class="nav-link" href="introduce.html">About me</a>
     </div>
   </nav>  
 
@@ -34,7 +34,7 @@
     <a class="nav-link rounded-3 text-dark fw-semibold" href="index.html">🔍 Wanna<br />Search?</a>
   </nav>
 
-  <button class="btn btn-outline-dark btn-lg ms-3 mt-5" onclick="history.back()">
+  <button class="btn btn-lg ms-3 backBtn" onclick="history.back()">
     ⬅️ Back
   </button>
 
@@ -44,14 +44,19 @@
       <div class="col-md-7 col-12 infoContainer"></div>
     </div>
     
-    <div class="row">
-      <canvas id="voteChart" width="400" height="200"></canvas>
+    <div class="row mt-5">
+      <canvas
+      id="voteChart"
+      width="400"
+      height="150"
+      style="background-color: rgba(220, 255, 220, 0.6); border-radius: 12px; padding: 8px;"
+    ></canvas>    
     </div>
   </div>  
-
+  
+  <script src="../js/index.js"></script>
   <script src="../js/movieData.js"></script>
   <script src="../js/detail.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="../js/index.js"></script>
 </body>
 </html>

@@ -1,9 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const movieId = params.get("id");
 
-console.log(movieId);
-
-
 const imgContainer = document.querySelector(".imgContainer");
 const infoContainer = document.querySelector(".infoContainer");
 
@@ -41,7 +38,7 @@ const img = `
 
     <p class="mb-5">
       <span class="fw-semibold">Overview:</span><br>
-      <span class="text-muted">${movie.overview}</span>
+      <span>${movie.overview}</span>
     </p>
 
     <div class="mb-3 d-flex justify-content-between">
@@ -70,3 +67,80 @@ imgContainer.innerHTML = img;
 infoContainer.innerHTML = info;
 
 const ctx = document.querySelector("#voteChart").getContext("2d");
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: ["Vote Average"],
+    datasets: [
+      {
+        label: "Rating",
+        data: [movie.vote_average],
+        backgroundColor: "rgba(170, 240, 140, 0.9)", 
+        maxBarThickness: 100,
+        borderRadius: 10
+      }
+    ]
+  },
+  options: {
+    indexAxis: "y",
+    scales: {
+      x: {
+        min: 0,
+        max: 10,
+        ticks: {
+          color: "#2f402f",
+          stepSize: 1,
+          font: {
+            size: 14,
+            weight: "bold"
+          }
+        },
+        grid: {
+          color: "rgba(0, 0, 0, 0.05)"
+        },
+        title: {
+          display: true,
+          text: "Score (out of 10)",
+          color: "#2f402f",
+          font: {
+            size: 16,
+            weight: "bold"
+          }
+        }
+      },
+      y: {
+        ticks: {
+          color: "#2f402f",
+          font: {
+            size: 16,
+            weight: "bold"
+          }
+        },
+        grid: {
+          display: false
+        }
+      }
+    },
+    plugins: {
+      tooltip: {
+        backgroundColor: "#f0fff0", 
+        titleColor: "#2f402f",
+        bodyColor: "#3d553d",
+        titleFont: {
+          size: 14,
+          weight: "bold"
+        },
+        bodyFont: {
+          size: 13
+        },
+        callbacks: {
+          label: ctx => `${ctx.parsed.x} / 10`
+        }
+      },
+      legend: {
+        display: false
+      }
+    }
+  }
+});

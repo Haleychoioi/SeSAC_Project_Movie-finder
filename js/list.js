@@ -10,7 +10,7 @@ console.log(movieList);
 if (!keyword) {
   resultList.innerHTML = `
   <div class="w-100 text-center py-5">
-    <h3 class="text-muted">Please enter a keyword to search 🎬</h3>
+    <h3>Please enter a keyword to search 🎬</h3>
   </div>
 `;
 } else {
@@ -21,12 +21,12 @@ if (!keyword) {
   if(filtered.length === 0) {
     resultList.innerHTML = `
     <div class="w-100 text-center py-5">
-      <h3 class="text-muted">No results found for "<strong>${keyword}</strong>" 😥</h3>
-      <p class="text-secondary">Try another keyword or check spelling</p>
+      <h3>No results found for "<strong>${keyword}</strong>" 😥</h3>
+      <p>Try another keyword or check spelling</p>
     </div>
   `;
   } else {
-    searchKeyword.innewrHTML = `[${keyword}] `;
+    searchKeyword.innerHTML = `[${keyword}] `;
 
     resultList.innerHTML = "";
     filtered.forEach(movie => {
@@ -47,7 +47,7 @@ if (!keyword) {
                 -webkit-line-clamp: 4;
                 -webkit-box-orient: vertical;
               ">${movie.overview}</p>
-              <a href="detail.html?id=${movie.id}" class="btn btn-primary mt-auto">Detail</a>
+              <a href="detail.html?id=${movie.id}" class="btn mt-auto text-white" style="background-color: #72BF78;">Detail</a>
             </div>
           </div>
         </div>
