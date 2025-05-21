@@ -29,20 +29,3 @@
   border-color: initial;   
   box-shadow: none !important;
 }
-
-.popcorn-area {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.popcorn {
-  position: absolute;
-  width: 40px;
-  opacity: 0;
-}
