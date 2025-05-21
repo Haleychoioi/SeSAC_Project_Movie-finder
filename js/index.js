@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("pageshow", function (event) {
   const form = document.querySelector(".movieForm");
-  const input = document.querySelector(".searchKeyword");
 
   if (event.persisted || performance.getEntriesByType("navigation")[0].type === "back_forward") {
     if (form) form.reset(); 

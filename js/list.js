@@ -57,8 +57,3 @@ if (!keyword) {
     })
   }
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  const keywordInput = document.querySelector(".searchKeyword");
-  if (keywordInput) keywordInput.value = ""; // 검색창 비우기 (선택사항)
-});
