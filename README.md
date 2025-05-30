@@ -24,21 +24,6 @@ TMDB API 대신 직접 정의한 영화 배열 데이터를 기반으로 **검�
 - 상세 페이지에서 Chart.js로 평점 시각화
 - GSAP 애니메이션, 반응형 UI 구성
 
-## 📁 폴더 구조
-
-├── index.html # 메인 페이지 (검색창) 
-├── list.html # 검색 결과 페이지 
-├── detail.html # 상세 정보 페이지 
-├── introduce.html # 자기 소개 
-├── js/ 
-│ ├── index.js # 메인 애니메이션 및 폼 리셋 
-│ ├── list.js # 검색 로직 및 카드 출력 
-│ ├── detail.js # 상세 정보 출력 + 차트 
-│ ├── introduce.js # 카드 뒤집기 애니메이션 
-│ └── movieData.js # 영화 하드코딩 데이터 
-└── css/ 
-└── style.css 등 # 스타일 정의 
-
 ## 🎥 실행 방법
 
 1. 이 레포를 클론합니다:
